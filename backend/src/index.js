@@ -7,8 +7,6 @@ mongoose.connect('mongodb+srv://semana:semana7@cluster0-zzexb.mongodb.net/test?r
    useNewUrlParser: true
 });
 
-app.get('/', (req, res) => {
-    return res.send(`Olá ${req.query.name}`);
-});
+app.use(require('./routes'));
 
 app.listen(3333);
